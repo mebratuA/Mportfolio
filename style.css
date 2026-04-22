@@ -288,6 +288,9 @@ footer {
   background: rgba(30, 41, 59, 0.4);
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
+.dark-mode #about label{
+    color: #e5e7eb;
+}
 .dark-mode .about-card {
   background: rgba(30, 41, 59, 0.6);
 }
