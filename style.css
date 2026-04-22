@@ -1,0 +1,340 @@
+:root {
+  --nav-height: 55px;
+}
+
+body {
+  padding-top: var(--nav-height);
+}
+body {
+  scroll-behavior: smooth;
+}
+
+section {
+  scroll-margin-top: 70px;
+}
+
+h2 {
+  font-weight: bold;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+.progress {
+  height: 20px;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  background: linear-gradient(135deg, #e3f2fd, #f8f9fa);
+  overflow-x: hidden;
+}
+
+/* BACKGROUND BLUR (fixed layer) */
+.bg-blur {
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, #0d6efd, transparent);
+  top: -100px;
+  left: -100px;
+  filter: blur(120px);
+  z-index: -1;
+  pointer-events: none; /* ensure blur doesn't block clicks */
+}
+
+/* NAVBAR */
+.navbar {
+  background: rgba(0, 0, 0, 0.4) !important;
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.nav-link:hover {
+  color: #0d6efd !important;
+}
+
+/* HERO */
+#home {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0d6efd, #6f42c1, #0dcaf0);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero-img {
+  width: 220px;
+  border-radius: 50%;
+  border: 5px solid rgba(255, 255, 255, 0.6);
+  box-shadow: 0 0 40px rgba(255, 255, 255, 0.6);
+  transition: 0.4s;
+}
+.hero-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 60px rgba(13, 110, 253, 0.9);
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* BUTTON */
+.btn-custom {
+  background: linear-gradient(45deg, #3e7ad3, #6f42c1);
+  /* color: white; */
+  border-radius: 30px;
+  padding: 10px 30px;
+  border: none;
+  transition: 0.3s;
+}
+.btn-custom:hover {
+  transform: translateY(-2px) scale(1.05);
+  box-shadow: 0 10px 25px rgba(13, 110, 253, 0.5);
+}
+
+/* SECTION TITLE */
+.section-title {
+  font-weight: 700;
+  margin-bottom: 40px;
+  position: relative;
+  display: inline-block;
+}
+.section-title::after {
+  content: "";
+  width: 60%;
+  height: 3px;
+  background: linear-gradient(90deg, #0d6efd, #6f42c1);
+  position: absolute;
+  left: 20%;
+  bottom: -8px;
+  border-radius: 10px;
+}
+
+/* CARD SYSTEM */
+.card {
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s ease;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+.card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(13, 110, 253, 0.3);
+}
+
+.about-card {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* SKILLS */
+.progress {
+  height: 8px;
+  border-radius: 10px;
+}
+
+/* TIMELINE */
+.timeline {
+  position: relative;
+  padding-left: 30px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 10px;
+  top: 0;
+  width: 2px;
+  height: 100%;
+  background: #0d6efd;
+}
+.timeline-item {
+  position: relative;
+  margin-bottom: 30px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  top: 5px;
+  width: 14px;
+  height: 14px;
+  background: #0d6efd;
+  border-radius: 50%;
+}
+
+/* SOCIAL */
+.social a {
+  color: white;
+  margin: 0 10px;
+  font-size: 22px;
+  transition: 0.3s;
+}
+.social a:hover {
+  transform: scale(1.3);
+  color: #0dcaf0;
+  text-shadow: 0 0 15px #0dcaf0;
+}
+
+/* TEXT */
+.about-text {
+  color: #555;
+}
+.custom-item {
+  background: transparent;
+  border: none;
+  padding-left: 0;
+  color: #444;
+}
+
+/* PROGRESS BAR */
+.custom-progress {
+  height: 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  background-color: #e9ecef;
+  overflow: hidden;
+}
+.progress-bar {
+  font-size: 10px;
+  line-height: 10px;
+}
+
+/* ANIMATION */
+.fade-in {
+  opacity: 0;
+  transform: translateY(40px) scale(0.98);
+  transition: all 0.8s ease;
+}
+.fade-in.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* FOOTER */
+footer {
+  background: linear-gradient(45deg, #3e7ad3, #6f42c1);
+}
+
+/* TYPING */
+.typing-text {
+  display: inline-block;
+  min-width: 220px;
+  white-space: nowrap;
+  border-right: 3px solid;
+  padding-right: 5px;
+}
+
+/* DARK MODE */
+.dark-mode {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+}
+
+/* DARK MODE - HOME SECTION */
+.dark-mode #home {
+  background: linear-gradient(135deg, #020617, #0f172a, #1e293b);
+  background-size: 300% 300%;
+  animation: gradientMove 10s ease infinite;
+  color: #e5e7eb;
+}
+
+/* Hero text visibility */
+.dark-mode #home h1,
+.dark-mode #home h4,
+.dark-mode #home p {
+  color: #e5e7eb;
+}
+
+/* Typing cursor */
+.dark-mode .typing-text {
+  border-right: 3px solid #0dcaf0;
+}
+
+/* Hero image glow (cool blue instead of white) */
+.dark-mode .hero-img {
+  border: 5px solid rgba(13, 202, 240, 0.5);
+  box-shadow: 0 0 40px rgba(13, 202, 240, 0.5);
+}
+
+.dark-mode .hero-img:hover {
+  box-shadow: 0 0 70px rgba(13, 202, 240, 0.9);
+}
+
+/* Social icons in hero */
+.dark-mode #home .social a {
+  color: #e5e7eb;
+}
+
+.dark-mode #home .social a:hover {
+  color: #0dcaf0;
+  text-shadow: 0 0 15px #0dcaf0;
+}
+.dark-mode .card {
+  background: rgba(30, 41, 59, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+.dark-mode .about-card {
+  background: rgba(30, 41, 59, 0.6);
+}
+.dark-mode .about-section {
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+}
+.dark-mode .bg-light {
+  background: transparent !important;
+}
+.dark-mode .about-text {
+  color: #ccc;
+}
+.dark-mode .custom-item {
+  color: #ddd;
+}
+.dark-mode .custom-progress {
+  background-color: #2a2a3d;
+}
+
+/* Projects Section */
+.dark-mode #projects {
+  background: linear-gradient(135deg, #1e1e2f, #121212);
+}
+.dark-mode #projects .card {
+  background: rgba(30, 41, 59, 0.5);
+  color: #e5e7eb;
+}
+.dark-mode #projects .card i {
+  color: #0dcaf0 !important;
+}
+.dark-mode footer {
+  background: linear-gradient(135deg, #0f172a, #020617);
+  color: #e5e7eb;
+}
+/* Contact Section */
+.dark-mode #contact .card {
+  background: rgba(30, 41, 59, 0.6);
+  color: #e5e7eb;
+}
+.dark-mode #contact .form-control {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #e5e7eb;
+}
+.dark-mode #contact .form-control::placeholder {
+  color: #aaa;
+}
+#modeToggle {
+  background: linear-gradient(45deg, #0d6efd, #6f42c1);
+}
